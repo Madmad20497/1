@@ -1,12 +1,4 @@
-name = "v2ray-worker"
-main = "build/worker/shim.mjs"
+name = "mmad-server"
+main = "src/index.js"
 compatibility_date = "2024-06-01"
-minify = true
-
-account_id = "REPLACE_WITH_YOUR_ACCOUNT_ID"
-
-[build]
-command = "cargo install -q worker-build && worker-build --release"
-
-[vars]
-UUID = "REPLACE-WITH-YOUR-UUID"
+account_id = "1bb77da482d664207e20c3210ad407c9"
