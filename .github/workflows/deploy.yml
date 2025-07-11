@@ -7,7 +7,7 @@ on:
 
 jobs:
   publish:
-    name: Publish to Cloudflare Workers
+    name: Deploy to Cloudflare Workers
     runs-on: ubuntu-latest
 
     steps:
@@ -26,10 +26,5 @@ jobs:
       - name: Install Wrangler
         run: npm install -g wrangler
 
-      - name: Authenticate Wrangler
-        run: wrangler login
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
-
-      - name: Build and Publish
-        run: wrangler publish --verbose
+      - name: Deploy to Cloudflare Workers
+        run: wrangler deploy --api-token ${{ secrets.CF_API_TOKEN }}
